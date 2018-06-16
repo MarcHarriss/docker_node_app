@@ -17,11 +17,13 @@ app.get('/', function(req, res) {
 
 app.post('/', function(req, res) {
 
-    let body = req.body;
-    let headers = req.headers;
-    let user = false;
-    let username;
-    let pass = false;
+    var body, headers, user, username, pass;
+
+    body = req.body;
+    headers = req.headers;
+    user = false;
+    username;
+    pass = false;
 
     for (q in body) {
         if (q === 'username') {
